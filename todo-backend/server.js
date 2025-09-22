@@ -10,7 +10,7 @@ const Todo = require('./models/todoModel');
 
 const connectDB = async () => {
     try {
-        await mongoose.connect("mongodb+srv://Root:Root123@tododb.rkf9pbs.mongodb.net/?retryWrites=true&w=majority&appName=ToDoDB")
+        await mongoose.connect("mongodb+srv://<username>:<password>@tododb.rkf9pbs.mongodb.net/?retryWrites=true&w=majority&appName=ToDoDB")
         console.log("MongoDB connected");
 
     } catch (error) {
