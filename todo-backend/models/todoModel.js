@@ -1,11 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose")
 
 const todoSchema = new mongoose.Schema({
-    todo: {
+    title:{
         type: String,
         required: true
     },
-
     completed: {
         type: Boolean,
         default: false
@@ -14,9 +13,9 @@ const todoSchema = new mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    completedAt: {
+    completedAt:{
         type: Date
     }
 })
 
-module.exports = mongoose.model('Todo', todoSchema);
+module.exports = mongoose.model('Todo', todoSchema)

@@ -1,40 +1,27 @@
-import React, {useState} from 'react';
+import React , {useState} from 'react'
 
-const AddTodo = ()=> {
+const AddTodo = ({ onAdd })=>{
+    const [todo, setTodo] = useState('')
 
-    const [todo, setTodo] = useState('This is a new state')
-    
-    const handleSubmit = async (e) => {
-        e.preventDefault();  
-        if (!todo) {
-            console.log("Please enter a todo");
-            return;
-        }
-        console.log(todo);
-        try {
-            const response = await fetch('http://localhost:3001/add-todo', {
-                method: "POST",
-                headers: {
-                    "Content-type": 'application/json'
-                },
-                body: JSON.stringify({todo})
-            })
-
-            console.log("Response received", response);
-
-        }catch(err) {
-            console.log("Error occurred while adding Todo", err);
-        }
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+        if(!todo) return;
+        console.log(todo)
+        onAdd(todo);
+        setTodo("");
     }
-
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" value={todo} onChange={(e)=> setTodo(e.target.value)}/>
-            <button type="submit">Submit</button>
-            
+            <input 
+                type="text"
+                value={todo}
+                onChange={(e)=> setTodo(e.target.value)}
+                placeholder='Add a new Todo'
+                required
+            />
+            <button type="submit" >Add Todo</button>
         </form>
     )
-
 }
 
 export default AddTodo

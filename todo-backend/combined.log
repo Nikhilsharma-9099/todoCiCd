@@ -1,5 +1,0 @@
-{"level":"info","message":"Fetched all todos ${todos}","service":"user-service"}
-{"level":"info","message":"Fetched all todos ${todos}","service":"user-service"}
-{"level":"info","message":"Fetched all todos ${JSON.stringify(todos)}","service":"user-service"}
-{"level":"info","message":"Fetched all todos ${JSON.stringify(todos)}","service":"user-service"}
-{"level":"info","message":"Fetched all todos ${JSON.stringify(todos)}","service":"user-service","timestamp":"2025-09-25T09:45:05.773Z"}
