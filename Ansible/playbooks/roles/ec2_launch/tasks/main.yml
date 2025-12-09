@@ -1,7 +1,7 @@
 ---
 - name: Adding SSH access to a security group
   amazon.aws.ec2_group: 
-    name: Nikhil
+    name: default
     description: Security group for EC2 instances
     region: ap-south-1
     rules: 
@@ -25,7 +25,7 @@
         to_port: 80
         cidr_ip: 0.0.0.0/0
 
-        rules_egress:
-          - proto: all
-            cidr_ip: 0.0.0.0/0
+    rules_egress:
+      - proto: all
+        cidr_ip: 0.0.0.0/0
   register: security_group
