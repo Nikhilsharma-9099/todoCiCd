@@ -3,7 +3,7 @@
   amazon.aws.ec2_group: 
     name: default
     description: Security group for EC2 instances
-    region: ap-south-1
+    region: us-east-1
     rules: 
       - proto: all
         from_port: 3001
