@@ -44,8 +44,8 @@ jobs:
 
       - name: Run Ansible Playbook
         run: |
-         ansible-playbook -i "localhost," -c local ./Ansible/playbooks/configure_provision_ec2_server.yml \
-         -e "EC2_SSH_KEY_PATH=~/.ssh/ec2_temp.pem" -vvv
+         ansible-playbook ./Ansible/playbooks/configure_provision_ec2_server.yml \
+         -e "EC2_SSH_KEY_PATH=~/.ssh/ec2_temp.pem"
       
         env:
          ANSIBLE_HOST_KEY_CHECKING: false
