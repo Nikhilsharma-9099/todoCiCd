@@ -4,5 +4,5 @@
 # vars file for ec2_launch
 aws_region: ap-south-1
 ec2_instance_type: t3.micro
-ec2_ami_id: ami-0fa3fe0fa7920f68e
+ec2_ami_id: ami-02b8269d5e85954ef
 ec2_key_name: ec2_temp
