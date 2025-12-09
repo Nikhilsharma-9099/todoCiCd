@@ -1,3 +1,4 @@
+---
 name: Provision of Ec2 instance and configuration with Ansible 
 
 on:
