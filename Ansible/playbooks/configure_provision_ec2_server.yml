@@ -5,10 +5,4 @@
     - ec2_launch
 
 
-- name: Configuration of ec2 instances
-  hosts: launched_ec2_instances
-  gather_facts: true
-  roles:
-    - common
-
     
