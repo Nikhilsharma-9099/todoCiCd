@@ -3,7 +3,7 @@
   amazon.aws.ec2_group: 
     name: default
     description: Security group for EC2 instances
-    region: us-east-1
+    region: ap-south-1
     rules: 
       - proto: all
         from_port: 3001
@@ -45,7 +45,7 @@
 
 - name: Wait for instance to be ready 
   wait_for:
-    host: "{{ ec2.instances[0].public_dns_name }}" 
+    host: "{{ec2.instances[0].public_dns_name}}" 
     port: 22
     delay: 30
     timeout: 300
